@@ -51,14 +51,14 @@ You must first install Anaconda Navigator from https://www.anaconda.com/download
 
 ### Instructions:
 
-Download the ECE Board Exam 2 dataset found on this link: bit.ly/ECEBoardExamDataset and write a
-Python script/code in the Jupyter Notebook to do the given problems. You may submit your Jupyter
-notebook in the dedicated submission bin.
+Download the ECE Board Exam 2 dataset found on this link: bit.ly/ECEBoardExamDataset and write a Python script/code in the Jupyter Notebook to do the given problems. You may submit your Jupyter notebook in the dedicated submission bin.
 
 ## ECE BOARD EXAM PROBLEM
 To successfully complete this problem, I used the data wrangling and data visualization techniques along with storytelling in order for me to analyze the data  and present different (i) data frames; and (ii) visuals using the dataset given.
 
-### To Start
+### To Start:
+
+I first imported pandas as pd and added a DataFrame containing the data from the Excel file "board2.xlsx", I then added a new code that adds column 'Average', and stores the mean of numerical values for each row, resulting in the following data.
 
 ```
 import pandas as pd
@@ -67,8 +67,6 @@ df = pd.read_excel("board2.xlsx")
 df['Average'] = df.mean(numeric_only=True, axis=1)
 df
 ```
-
-I first imported pandas as pd and added a DataFrame containing the data from the Excel file "board2.xlsx", I then added a new code that adds column 'Average', and stores the mean of numerical values for each row, resulting in the following data.
 
 ![Screenshot 2024-09-17 at 4 58 44 PM](https://github.com/user-attachments/assets/60674ced-9ebf-43d2-bd9b-8339d042c6cf)
 
@@ -89,7 +87,7 @@ Instru = df.loc[(df.Track=="Instrumentation") & (df.Hometown=="Luzon") & (df.Ele
 Instru
 ```
 
-
+The provided code filters the DataFrame df to include only those rows where the track is “Instrumentation”, the hometown is “Luzon”, and the value in the Electronics column is greater than 70. Subsequently, it extracts and stores the 'Name', 'GEAS', and 'Electronics' columns of these filtered rows into a new DataFrame named Instru. The resulting output is displayed below.
 
 ![Screenshot 2024-09-17 at 5 05 55 PM](https://github.com/user-attachments/assets/14801282-e9ae-4b83-a201-a133a82ee26d)
 
@@ -100,7 +98,7 @@ Mindy = df.loc[(df.Hometown == "Mindanao") & (df.Gender=="Female") & (df.Average
 Mindy
 ```
 
-
+The code filters the DataFrame df to include rows where Hometown is "Mindanao", Gender is "Female", and Average is 55 or higher. It then selects the 'Name', 'Track', and 'Electronics' columns from these rows and assigns them to the variable Mindy, which is displayed below.
 
 ![Screenshot 2024-09-17 at 5 06 22 PM](https://github.com/user-attachments/assets/5711565d-e6b2-4494-9d43-9859e8d36bfa)
 
@@ -159,6 +157,9 @@ Based on the illustrations from the three graphs above, we can observe that the 
 Jarrel Parayno (jarrel.parayno.eng@ust.edu.ph)
 
 ## Version History
+* 0.3
+  * Updated the README.md file
+  * Uploaded the ipynb file
 * 0.2
   * Updated the README.md file
 * 0.1
